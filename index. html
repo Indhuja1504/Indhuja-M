@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .form-container {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+    }
+    .form-container h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form-group input, .form-group select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+    .form-group input:focus, .form-group select:focus {
+        outline: none;
+        border-color: #66afe9;
+        box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+    }
+    .btn-group {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .btn {
+        padding: 10px 20px;
+        margin: 0 5px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+    }
+    .btn-submit {
+        background-color: #4CAF50;
+        color: white;
+    }
+    .btn-submit:hover {
+        background-color: #45a049;
+        border-color: #45a049;
+    }
+    .btn-cancel {
+        background-color: #f44336;
+        color: white;
+    }
+    .btn-cancel:hover {
+        background-color: #d32f2f;
+        border-color: #d32f2f;
+    }
+</style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Student Registration</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="rollno">Roll No:</label>
+                <input type="text" id="rollno" name="rollno" required placeholder="Enter Roll No">
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter Name">
+            </div>
+            <div class="form-group">
+                <label for="dept">Department:</label>
+                <select id="dept" name="dept" required>
+                    <option value="">Select Department</option>
+                    <option value="CSE">Computer Science</option>
+                    <option value="ECE">Electronics and Communication</option>
+                    <option value="MECH">Mechanical Engineering</option>
+                    <option value="CIVIL">Civil Engineering</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="marks10">10th Marks:</label>
+                <input type="text" id="marks10" name="marks10" required placeholder="Enter 10th Marks">
+            </div>
+            <div class="form-group">
+                <label for="marks12">12th Marks:</label>
+                <input type="text" id="marks12" name="marks12" required placeholder="Enter 12th Marks">
+            </div>
+            <div class="form-group">
+                <label for="percentage">Degree Percentage:</label>
+                <input type="text" id="percentage" name="percentage" required placeholder="Enter Degree Percentage">
+            </div>
+            <div class="btn-group">
+                <button type="submit" class="btn btn-submit">Submit</button>
+                <button type="button" class="btn btn-cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
