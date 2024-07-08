@@ -2,28 +2,34 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=                                                                                                                                                                                                                                                   , initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <h1>Bharanidharan Sports Acadamy</h1>
-    <h2>Gents Players List</h2> 
-    <ol>
-        <li>Prem</li>
-        <li>Karthick</li>
-        <li>Arun</li>
-        <li>Bharani</li>
-    </ol>
-    <h3>WomensPlayers List</h3>
-    <ol>
-        <li>Kavitha</li>
-        <li>Preehi</li>
-        <li>Latha</li>
-        <li>Suvithra</li>
-    </ol>
-    <img src="images.jpg"width="300"><br>
-    <p1>We are one of the best sports acadamy in tamilnadu. We are giving practice for young Players</p1><br>
-    <p>Created By Bharanidharan</p>
+    <div class="gallery">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image1.jpg" alt="Image 2">
+        <img src="image1.jpg" alt="Image 3">
+        <img src="image1.jpg" alt="Image 4">
+        <img src="image1.jpg" alt="Image 5">
+        <img src="image1.jpg" alt="Image 6">
+        <img src="image1.jpg" alt="Image 7">
+        <img src="image1.jpg" alt="Image 8">
+        <img src="image1.jpg" alt="Image 9">
+    </div>
 </body>
 </html>
