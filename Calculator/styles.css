@@ -1,0 +1,14 @@
+table,tr,th,td{
+    border:3px solid #22e2b9;
+    border-collapse: collapse;
+  }
+  table{
+    width: 200px;
+    height: 300px;
+    text-align: center;
+  }
+  th{
+    color: white;
+    background-color: #22e2b9;
+  }
+  
