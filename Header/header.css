@@ -1,0 +1,16 @@
+div,ul{
+    display: flex;
+    
+    background-color: rgb(59, 135, 165);
+    list-style: none;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+}
+div{
+    padding: 10px;
+}
+li:hover{
+    color: black;
+    cursor: pointer;
+}
