@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+    <div class="container">
+        <form class="survey-form">
+            <img src="image.jpg" alt="Logo" class="logo">
+            <h1>ACQUIOS</h1>
+            <div class="form-group">
+                <label for="first-name">First Name*</label>
+                <input type="text" id="first-name" name="first-name" required><br>
+                <label for="last-name">Last Name*</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address*</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="experience">How was your overall experience?*</label>
+                <div class="rating">
+                    <input type="radio" id="star1" name="rating" value="1">
+                    <label for="star1">★</label>
+                    <input type="radio" id="star2" name="rating" value="2">
+                    <label for="star2">★</label>
+                    <input type="radio" id="star3" name="rating" value="3">
+                    <label for="star3">★</label>
+                    <input type="radio" id="star4" name="rating" value="4">
+                    <label for="star4">★</label>
+                    <input type="radio" id="star5" name="rating" value="5">
+                    <label for="star5">★</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Was our representative (check all that apply):</label>
+                <div class="checkbox-group">
+                    <div>
+                        <input type="checkbox" id="professional" name="attributes" value="professional">
+                        <label for="professional">Professional and courteous?</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="patient" name="attributes" value="patient">
+                        <label for="patient">Patient?</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="knowledgeable" name="attributes" value="knowledgeable">
+                        <label for="knowledgeable">Knowledgeable?</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="warm" name="attributes" value="warm">
+                        <label for="warm">Warm and respectful?</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="friendly" name="attributes" value="friendly">
+                        <label for="friendly">Friendly?</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="direct" name="attributes" value="direct">
+                        <label for="direct">Clear and direct?</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="efficient" name="attributes" value="efficient">
+                        <label for="efficient">Efficient?</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
