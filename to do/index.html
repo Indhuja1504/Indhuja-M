@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body,html{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.green{
+    background-color: green;
+    padding: 20px 5px;
+}
+.white{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.add{
+    background-color: rgb(26, 168, 245);
+    border: 0cap;
+    border-radius: 7px;
+    width: 50px;
+   padding: 3px;
+}
+ol li:nth-child(2){
+    text-decoration:line-through;
+    background-color: gray;
+    
+}
+.clear{
+    background-color: rgb(26, 168, 245);
+    color: white;
+    padding: 3px 10px;
+    border-radius: 9px;
+    border: none;
+    margin-right: 5px;
+}
+.empty{
+    background-color: brown;
+    border: none;
+    padding: 3px 13px;
+    border-radius: 7px;
+    margin-right: 5px;
+}
+.save{
+    background-color: green;
+    border: 0;
+    padding: 3px 13px;
+    border-radius: 8px;
+}
+li{
+    list-style-type: none;
+}
+  </style>
+</head>
+<body>
+    <div class="green">
+      <div class="white">
+      <h3>My to-do list</h3>
+      <p>Double-click an item to mark it complete.</p>
+      <input type="text"> <button class="add">add</button>
+      <br>
+      <br>
+      <ol>
+        <li>1. My</li>
+        <li>2. to do</li>
+        <li>3. list</li>
+      </ol>
+      <br>
+      <button class="clear">Clear Completed</button>
+      <button class="empty">Empty List</button>
+      <button class="save">Save list</button>
+    </div>
+    </div>
+</body>
+</html>
+
+
