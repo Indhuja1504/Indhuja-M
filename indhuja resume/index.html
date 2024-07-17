@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>ShopEasy</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#cart">Cart</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="container">
+        <h2>Welcome to ShopEasy</h2>
+        <p>Your one-stop shop for all your needs!</p>
+    </section>
+
+    <section id="products" class="container">
+        <h2>Products</h2>
+        <div class="product-item">
+            <h3>Kids Frock</h3>
+            <img src="kids.avif" alt="">
+            <p>Rs. 460</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <h3>Kurta Set</h3>
+            <img src="kurta.avif" alt="">
+            <p>Rs. 900</p>
+            <button>Add to Cart</button>
+        </div>
+        <div class="product-item">
+            <h3>Men's Shirt</h3>
+            <img src="shirt.avif" alt="">
+            <p>Rs. 800</p>
+            <button>Add to Cart</button>
+        </div>
+    </section>
+
+    <section id="cart" class="container">
+        <h2>Your Cart</h2>
+        <p>Your cart is empty.</p>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ShopEasy</p>
+        </div>
+    </footer>
+</body>
+</html>
