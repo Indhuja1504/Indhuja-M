@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .message-box {
+            background-color: #ffedc2;
+            border: 2px solid #ffca59;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        .message-box img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .message-box h2 {
+            margin: 0;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .message-box input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .message-box button {
+            width: 100px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .message-box .accept {
+            background-color: #835c07;
+            color: #fff;
+        }
+
+        .message-box .decline {
+            background-color: #b86e0f;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="message-box">
+        <img src="icon.png">
+        <h2>Ask Me a Question</h2>
+        <input type="text" placeholder="Type something..." id="question">
+        <div>
+            <button class="accept" onclick="acceptQuestion()">Accept</button>
+            <button class="decline" onclick="declineQuestion()">Decline</button>
+        </div>
+    </div>
+
+    <script>
+        function acceptQuestion() {
+            const question = document.getElementById('question').value;
+            alert('Question Accepted: ' + question);
+        }
+
+        function declineQuestion() {
+            alert('Question Declined');
+        }
+    </script>
+</body>
+</html>
