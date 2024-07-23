@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESIGN</title>
+    <style>
+        #red {
+            color: blue;
+        }
+        #ja {
+            background-color: black;
+            color: white;
+            width: 30%;
+            
+
+            margin-left:280px ;
+           border: 1px solid black;
+        }
+        #container {
+            height: 100px;
+            width: 800px;
+            text-align: center;
+            background-color: black;
+            padding-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="ja">
+        <p>background-color: <span id="red">Red</span></p>
+    </div>
+        <button id="b" style="background-color: red;">Color me</button>
+    </div>
+
+    <script>
+        document.getElementById("b").onclick = function() {
+            document.getElementById("container").style.backgroundColor = "red";
+        };
+    </script>
+    
+</body>
+</html>
