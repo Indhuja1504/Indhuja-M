@@ -3,33 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photo Gallery</title>
+    <title>DESIGN</title>
     <style>
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            max-width: 600px;
-            margin: auto;
+        #red {
+            color: blue;
         }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            display: block;
+        #ja {
+            background-color: black;
+            color: white;
+            width: 30%;
+            
+
+            margin-left:280px ;
+           border: 1px solid black;
+        }
+        #container {
+            height: 100px;
+            width: 800px;
+            text-align: center;
+            background-color: black;
+            padding-top: 100px;
         }
     </style>
 </head>
 <body>
-    <div class="gallery">
-        <img src="image1.jpg" alt="Image 1">
-        <img src="image1.jpg" alt="Image 2">
-        <img src="image1.jpg" alt="Image 3">
-        <img src="image1.jpg" alt="Image 4">
-        <img src="image1.jpg" alt="Image 5">
-        <img src="image1.jpg" alt="Image 6">
-        <img src="image1.jpg" alt="Image 7">
-        <img src="image1.jpg" alt="Image 8">
-        <img src="image1.jpg" alt="Image 9">
+    <div id="container">
+        <div id="ja">
+        <p>background-color: <span id="red">Red</span></p>
     </div>
+        <button id="b" style="background-color: red;">Color me</button>
+    </div>
+
+    <script>
+        document.getElementById("b").onclick = function() {
+            document.getElementById("container").style.backgroundColor = "red";
+        };
+    </script>
+    
 </body>
 </html>
