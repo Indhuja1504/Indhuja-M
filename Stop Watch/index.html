@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+</head>
+<body>
+    <style>
+        body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1E2A38;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.stopwatch {
+    background: #2B3A4B;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.time {
+    font-size: 48px;
+    color: #FFF;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    background: #FF5733;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background: #FF784E;
+}
+
+.laps {
+    margin-top: 20px;
+    color: #FFF;
+    text-align: left;
+}
+
+    </style>
+    <div class="stopwatch">
+        <div class="time" id="display">00:00:00</div>
+        <div class="buttons">
+            <button id="start">Start</button>
+            <button id="lap">Lap</button>
+            <button id="stop">Stop</button>
+            <button id="reset">Reset</button>
+        </div>
+        <div class="laps" id="laps"></div>
+    </div>
+    <script>
+        let startTime;
+let updatedTime;
+let difference;
+let tInterval;
+let running = false;
+let stopped = false;
+let lapNumber = 0;
+let savedLaps = [];
+
+const display = document.getElementById('display');
+const startButton = document.getElementById('start');
+const stopButton = document.getElementById('stop');
+const resetButton = document.getElementById('reset');
+const lapButton = document.getElementById('lap');
+const lapsContainer = document.getElementById('laps');
+
+function startTimer() {
+    if (!running) {
+        startTime = new Date().getTime() - (difference || 0);
+        tInterval = setInterval(updateTime, 1000);
+        running = true;
+        stopped = false;
+        startButton.textContent = "Start";
+    }
+}
+
+function stopTimer() {
+    if (running) {
+        clearInterval(tInterval);
+        difference = new Date().getTime() - startTime;
+        running = false;
+        stopped = true;
+        startButton.textContent = "Resume";
+    }
+}
+
+function resetTimer() {
+    clearInterval(tInterval);
+    running = false;
+    stopped = false;
+    difference = 0;
+    lapNumber = 0;
+    savedLaps = [];
+    display.textContent = "00:00:00";
+    lapsContainer.innerHTML = "";
+    startButton.textContent = "Start";
+}
+
+function recordLap() {
+    if (running) {
+        lapNumber++;
+        const lapTime = formatTime(difference);
+        savedLaps.push(`Lap ${lapNumber}: ${lapTime}`);
+        renderLaps();
+    }
+}
+
+function renderLaps() {
+    lapsContainer.innerHTML = savedLaps.join('<br>');
+}
+
+function updateTime() {
+    updatedTime = new Date().getTime() - startTime;
+    display.textContent = formatTime(updatedTime);
+    difference = updatedTime;
+}
+
+function formatTime(time) {
+    let hours = Math.floor((time / (1000 * 60 * 60)) % 24);
+    let minutes = Math.floor((time / (1000 * 60)) % 60);
+    let seconds = Math.floor((time / 1000) % 60);
+
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    return `${hours}:${minutes}:${seconds}`;
+}
+
+startButton.addEventListener('click', startTimer);
+stopButton.addEventListener('click', stopTimer);
+resetButton.addEventListener('click', resetTimer);
+lapButton.addEventListener('click', recordLap);
+
+    </script>
+</body>
+</html>
