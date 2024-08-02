@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Sheet</title>
+    <style>
+        body {
+            border: 5px solid brown;
+            background-color: antiquewhite;
+            font-family: Arial, sans-serif;
+        }
+        .one {
+            display: flex;
+            text-align: center;
+        }
+        .o1 {
+            width: 30%;
+        }
+        .o2 {
+            width: 40%;
+        }
+        .o3 {
+            width: 30%;
+        }
+        .heading {
+            text-align: center;
+            color: brown;
+            margin: 20px;
+        }
+        .grid {
+            display: grid;
+            border: 2px solid sandybrown;
+            grid-template-columns: 1fr 2fr 1fr 1fr 2fr;
+            grid-template-rows: auto auto;
+            text-align: center;
+            margin: 10px;
+        }
+        .i1, .i2, .i3, .i4, .i5 {
+            border: 2px solid sandybrown;
+            background-color: rgb(252, 207, 167);
+            padding: 10px;
+        }
+        .subject1 {
+            display: grid;
+            border: 2px solid sandybrown;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(5, auto);
+            text-align: center;
+            margin: 10px;
+        }
+        .subject1 div {
+            border: 2px solid sandybrown;
+            background-color: rgb(252, 207, 167);
+            padding: 10px;
+        }
+        .t1 { grid-column: 1; grid-row: 1 / span 2; }
+        .t2 { grid-column: 2; grid-row: 1 / span 2; }
+        .t3 { grid-column: 3; grid-row: 1 / span 2; }
+        .t4 { grid-column: 4 / span 3; grid-row: 1; }
+        .t5 { grid-column: 7; grid-row: 1 / span 2; }
+        .t6 { grid-column: 4; grid-row: 2; }
+        .t7 { grid-column: 5; grid-row: 2; }
+        .t8 { grid-column: 6; grid-row: 2; }
+        .t9 { grid-column: 1; grid-row: 3; }
+        .t10 { grid-column: 2; grid-row: 3; text-align: left; }
+        .t11 { grid-column: 3; grid-row: 3; }
+        .t12 { grid-column: 4; grid-row: 3; }
+        .t13 { grid-column: 5; grid-row: 3; }
+        .t14 { grid-column: 6; grid-row: 3; }
+        .t15 { grid-column: 7; grid-row: 3; }
+        .t16 { grid-column: 1 / span 7; grid-row: 4; }
+        .t17 { grid-column: 1 / span 2; grid-row: 5; }
+        .t18 { grid-column: 3 / span 2; grid-row: 5; }
+        .t19 { grid-column: 5; grid-row: 5; }
+        .t20 { grid-column: 6; grid-row: 5; }
+        .t21 { grid-column: 7; grid-row: 5; }
+        .t22 { grid-column: 1 / span 2; grid-row: 6; }
+        .t23 { grid-column: 3 / span 2; grid-row: 6; }
+        .t24 { grid-column: 5; grid-row: 6; }
+        .t25 { grid-column: 6; grid-row: 6; }
+        .t26 { grid-column: 7; grid-row: 6; }
+        .FOOT {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px;
+        }
+        .f1, .f2 {
+            width: 48%;
+            padding: 10px;
+        }
+        .f2 {
+            text-align: center;
+        }
+        input[type="number"], input[type="text"] {
+            width: 100%;
+            text-align: center;
+            border: 1px solid sandybrown;
+            background-color: rgb(252, 207, 167);
+            padding: 5px;
+        }
+        .subject1 input[type="text"] {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="one">
+            <div class="o1">     
+                <h4>Sr.No:<span style="color: brown;">0000000</span></h4>
+            </div>
+            <div class="o2">
+                <img src="Screenshot 2024-08-01 144943.png" alt="">
+            </div>
+            <div class="o1">
+                <h2>QR Code <br> Here</h2>
+            </div>
+        </div>
+        <div class="heading">
+            <h1>All India Institute Of Fire Technology and Safety Management</h1>
+            <h3>Associated With Technical and Paramedical Education Council <br>
+            An Autonomous Institution Recognized by Government of India</h3>
+            <h1 style="color: chocolate;">Annual Statement of Marks</h1>
+        </div>
+        <div class="grid">
+            <div class="i1"><h3>Name of the Candidate</h3><h2><input type="text" id="candidate-name" value="Candidate's Name"></h2></div>
+            <div class="i2"><h3>Course name with code</h3><h2><input type="text" id="course-name" value="Diploma in Fire & Safety Management <br>DFS012"></h2></div>
+            <div class="i3"><h3>Reg.No.</h3><h2><input type="text" id="reg-no" value="(Registration Number)"></h2></div>
+            <div class="i4"><h3>Enrollment No.</h3><h2><input type="text" id="enroll-no" value="(Enrollment Number)"></h2></div>
+            <div class="i5"><h3>Authorised Training Center Name With Code</h3><h2><input type="text" id="training-center" value="(Authorised Training Center's Name)"></h2></div>
+        </div>
+        <div class="subject1">
+            <div class="t1"><h3>Subject <br>Code</h3></div>
+            <div class="t2"><h3>Subject Name</h3></div>
+            <div class="t3"><h3>Max.<br>Marks</h3></div>
+            <div class="t4"><h3>Theory Marks</h3></div>
+            <div class="t5"><h3>Practical Marks</h3></div>
+            <div class="t6"><h3>Total Marks</h3></div>
+            <div class="t7"><h3>Total In Words</h3></div>
+            <div class="t8"><h3>Total</h3></div>
+            <div class="t9">
+                <input type="text" id="subject-code-1" value="DFS012-101">
+                <input type="text" id="subject-code-2" value="DFS012-102">
+                <input type="text" id="subject-code-3" value="DFS012-103">
+                <input type="text" id="subject-code-4" value="DFS012-104">
+                <input type="text" id="subject-code-5" value="DFS012-105">
+                <input type="text" id="subject-code-6" value="DFS012-106">
+                <input type="text" id="subject-code-7" value="DFS012-107">
+                <input type="text" id="subject-code-8" value="DFS012-108">
+            </div>
+            <div class="t10">
+                <input type="text" id="subject-name-1" value="Fire Science and Technology">
+                <input type="text" id="subject-name-2" value="Fire Prevention and Investigation">
+                <input type="text" id="subject-name-3" value="Fire Protection and Survey">
+                <input type="text" id="subject-name-4" value="Fire Extinction and Control">
+                <input type="text" id="subject-name-5" value="Industrial Safety Management">
+                <input type="text" id="subject-name-6" value="Practical I">
+                <input type="text" id="subject-name-7" value="Practical II">
+                <input type="text" id="subject-name-8" value="Project Work">
+            </div>
+            <div class="t11">
+                <input type="number" id="max-marks-1" value="100" readonly>
+                <input type="number" id="max-marks-2" value="100" readonly>
+                <input type="number" id="max-marks-3" value="100" readonly>
+                <input type="number" id="max-marks-4" value="100" readonly>
+                <input type="number" id="max-marks-5" value="100" readonly>
+                <input type="number" id="max-marks-6" value="100" readonly>
+                <input type="number" id="max-marks-7" value="100" readonly>
+                <input type="number" id="max-marks-8" value="100" readonly>
+            </div>
+            <div class="t12">
+                <input type="number" id="theory-marks-1" value="00">
+                <input type="number" id="theory-marks-2" value="00">
+                <input type="number" id="theory-marks-3" value="00">
+                <input type="number" id="theory-marks-4" value="00">
+                <input type="number" id="theory-marks-5" value="00">
+                <input type="number" id="theory-marks-6" value="00">
+                <input type="number" id="theory-marks-7" value="00">
+                <input type="number" id="theory-marks-8" value="00">
+            </div>
+            <div class="t13">
+                <input type="number" id="practical-marks-1" value="00">
+                <input type="number" id="practical-marks-2" value="00">
+                <input type="number" id="practical-marks-3" value="00">
+                <input type="number" id="practical-marks-4" value="00">
+                <input type="number" id="practical-marks-5" value="00">
+                <input type="number" id="practical-marks-6" value="00">
+                <input type="number" id="practical-marks-7" value="00">
+                <input type="number" id="practical-marks-8" value="00">
+            </div>
+            <div class="t14">
+                <input type="text" id="total-marks-1" readonly>
+                <input type="text" id="total-marks-2" readonly>
+                <input type="text" id="total-marks-3" readonly>
+                <input type="text" id="total-marks-4" readonly>
+                <input type="text" id="total-marks-5" readonly>
+                <input type="text" id="total-marks-6" readonly>
+                <input type="text" id="total-marks-7" readonly>
+                <input type="text" id="total-marks-8" readonly>
+            </div>
+            <div class="t15">
+                <input type="text" id="total-words-1" readonly>
+                <input type="text" id="total-words-2" readonly>
+                <input type="text" id="total-words-3" readonly>
+                <input type="text" id="total-words-4" readonly>
+                <input type="text" id="total-words-5" readonly>
+                <input type="text" id="total-words-6" readonly>
+                <input type="text" id="total-words-7" readonly>
+                <input type="text" id="total-words-8" readonly>
+            </div>
+            <div class="t16">
+                <h4>Grand Total: <span id="grand-total">000</span> <br> In Words: <span id="grand-total-words">Zero Hundred Zero Zero</span></h4>
+            </div>
+            <div class="t17"><h4>Month and Year of Examination</h4></div>
+            <div class="t18"><h4>No. of Subjects Offered</h4></div>
+            <div class="t19"><h4>Result</h4></div>
+            <div class="t20"><h4>Percentage</h4></div>
+            <div class="t21"><h4>Grade</h4></div>
+            <div class="t22"><h4 id="exam-month-year">May 2020</h4></div>
+            <div class="t23"><h4 id="subjects-offered">T5+P3=8</h4></div>
+            <div class="t24"><h4 id="result">PASS</h4></div>
+            <div class="t25"><h4 id="percentage">00.00%</h4></div>
+            <div class="t26"><h4 id="grade">(Grade)</h4></div>
+        </div>
+        <div class="FOOT">
+            <div class="f1"><h3>Date: <span id="result-date">(Date of Result)</span></h3></div>
+            <div class="f2"><h3>(Signature of Deputy <br> Controller of Examination) <br> Deputy Controller of Examination</h3></div>
+        </div>
+        <h3 style="text-align: center; color: brown;">Subject Marked With * Indicates Exemption</h3>
+    </div>
+
+    <script>
+        function calculateTotals() {
+            const numSubjects = 8;
+            let totalMarksObtained = 0;
+            let totalMaxMarks = 0;
+
+            for (let i = 1; i <= numSubjects; i++) {
+                const maxMarks = 100; // Set max marks as 100
+                const theoryMarks = parseInt(document.getElementById(`theory-marks-${i}`).value) || 0;
+                const practicalMarks = parseInt(document.getElementById(`practical-marks-${i}`).value) || 0;
+                const totalMarks = theoryMarks + practicalMarks;
+
+                totalMaxMarks += maxMarks;
+                totalMarksObtained += totalMarks;
+
+                document.getElementById(`total-marks-${i}`).value = totalMarks;
+                document.getElementById(`total-words-${i}`).value = toWords(totalMarks); // Convert total marks to words
+            }
+
+            const grandTotal = totalMarksObtained;
+            const percentage = (totalMarksObtained / (numSubjects * 100)) * 100;
+            const grade = getGrade(percentage);
+
+            document.getElementById('grand-total').innerText = grandTotal;
+            document.getElementById('grand-total-words').innerText = toWords(grandTotal);
+            document.getElementById('percentage').innerText = `${percentage.toFixed(2)}%`;
+            document.getElementById('grade').innerText = grade;
+        }
+
+        function toWords(num) {
+            const units = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+            const teens = ["Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
+            const tens = ["Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+
+            if (num < 10) return units[num];
+            if (num < 20) return teens[num - 11];
+            if (num % 10 === 0) return tens[Math.floor(num / 10) - 1];
+            return tens[Math.floor(num / 10) - 1] + " " + units[num % 10];
+        }
+
+        function getGrade(percentage) {
+            if (percentage >= 90) return "A";
+            if (percentage >= 80) return "B";
+            if (percentage >= 70) return "C";
+            if (percentage >= 60) return "D";
+            if (percentage >= 50) return "E";
+            return "F";
+        }
+
+        document.querySelectorAll('input[type="number"]').forEach(input => {
+            input.addEventListener('input', calculateTotals);
+        });
+
+        calculateTotals(); // Initialize calculations
+    </script>
+</body>
+</html>
